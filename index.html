@@ -11,16 +11,41 @@
     <div class="demo">
         <h1 class="h"><u>Expense Tracker Site</u></h1>
     </div>
+
     <div class="add_button_container">
         <button id="add_item_button">+</button>
     </div>
 
-    <div class="items"></div>
-    <div class="pop_up">
-        <p>== form goes here ==</p>
-        <button class="cancel_popup_button">cancel</button>
+    <div class="items">
+        <div class="Heading_div">
+            <span id="Name">Name</span>
+            <span id="Category">Category</span>
+            <span id="Price" >Price</span>
+            <button id="delete_all_button">Delete All</button>
+        </div>
     </div>
-
+    <div class="pop_up">
+        <h2>Add Expense</h2>
+            <form id="expenseForm">
+                <label for="title">Expense Name</label>
+                <input type="text" id="title">
+            
+                <label for="amount">Amount</label>
+                <input type="number" id="amount">
+            
+                <label for="category">Category</label>
+                <select id="category">
+                    <option>Food</option>
+                    <option>Travel</option>
+                    <option>Shopping</option>
+                </select>
+            
+                <button type="submit" id="submit">Save</button>
+            </form>
+            <button class="cancel_popup_button">cancel</button>
+        
+    </div>
+        
     <script src="script.js"></script>
 
 </body>
