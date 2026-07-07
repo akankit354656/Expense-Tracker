@@ -17,19 +17,19 @@ body{
     border-color: rgb(0, 123, 137);
     height:1000px;
     display: flex;
+    flex-direction: column;
 }
 .Heading_div{
     display: flex;
     align-items: center;
-    width: 100%;
+    padding: 10px;
+    width: 100% - 70px;
     height: 40px;
     background: #4c4b5e;
-    padding: 10px;
-    border-radius: 5px;
-    /* box-sizing: border-box; */
+    border-radius: 6px;
 }
 
-#delete_button{
+#delete_all_button{
     width: 70px;
     margin-left: 10px;
     cursor: pointer;
@@ -38,11 +38,8 @@ body{
 .Heading_div span{
     flex: 1;
     text-align: left;
-    cursor: pointer;
     font-size: 20px;
 }
-
-
 
 .add_button_container{
     display: flex;
@@ -58,11 +55,11 @@ body{
     margin-right: 10px;
 }
 
-
 .pop_up{
-    height:600px;
+    margin-top: 50px;
+    height:300px;
     width:600px;
-    background-color:rgb(92, 74, 109);
+    background-color:rgb(12, 74, 109);
     color: chartreuse;
     border: 2px;
     border-radius: 7px;
@@ -74,7 +71,25 @@ body{
     z-index: 1000;
     opacity: 0;
 }
+#submit{
+    margin: 20px;
+    cursor: pointer;
+}
+#title_div{
+    font-size: 20px;
+}
+#amount_div{
+    font-size: 20px;
+}
+#category_div{
+    font-size: 20px;
+}
 
+#expenseForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .pop_up.show{
     opacity:1;
@@ -86,5 +101,26 @@ body{
     right: 15px;
     bottom: 15px;
 }
+
+
+/* ////////////////////// */
+
+.expense{
+    display:flex;
+    align-items:center;
+    padding:10px;
+    margin:8px;
+    background:#333;
+    color:white;
+    border-radius:6px;
+}
+.expense span{
+    flex:1;
+}
+
+.expense button{
+    margin-left:10px;
+}
+
 
 
