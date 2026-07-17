@@ -32,17 +32,20 @@ function displayExpense(expense, index){
     <button data-index="${index}" class="edit-btn">Edit</button>
     <div class="date">${expense.expense_date}</div>
     `;
+    
     expenseListDiv.appendChild(row); 
 
     document.getElementById(`${index}`).addEventListener("click", ()=>{
-        console.log("Delete clicked", index);
-        expenseList.splice(index, 1);
-        localStorage.setItem(
-            "expenses",
-            JSON.stringify(expenseList)
-        );
-        alert("Delete successfully");
-        loadExpenses();
+        const isConfirm = confirm("Are you sure you want to delete expense ? ");
+        if(isConfirm){
+            console.log("Delete clicked", index);
+            expenseList.splice(index, 1);
+            localStorage.setItem(
+                "expenses",
+                JSON.stringify(expenseList)
+            );
+            loadExpenses();
+        }
     });
 
     const editBtn = row.querySelector(".edit-btn");
@@ -50,6 +53,7 @@ function displayExpense(expense, index){
         console.log(index);
         edit_expense(expense, index);
     })
+
 }
 
 function edit_expense(expense, index){
