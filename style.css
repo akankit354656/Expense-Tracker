@@ -16,7 +16,7 @@ body{
     border:2px;
     border-radius: 5px;
     border-color: rgb(0, 123, 137);
-    min-height: 500px;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -89,9 +89,16 @@ body{
 #submit{
     margin: 20px;
     cursor: pointer;
-    height: 30px;
-    width:70px;
-    font-size: 20px;
+    height: 35px;
+    width:80px;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: rgb(0, 222, 0);
+}
+
+input{
+    font-weight: 500;
 }
 #title_div{
     font-size: 30px;
@@ -99,6 +106,7 @@ body{
 #title{
     width: 200px;   
     height: 20px;
+    font-weight: 700;
 }
 
 #title::placeholder{
@@ -111,17 +119,19 @@ body{
 #amount{
     width: 200px;   
     height: 20px;
+    font-weight: 700;
 }
 #amount::placeholder{
     font-size: 18px;
 }
 
 #category_div{
-    font-size: 30px;
+    font-size: 35px;
 }
 #category{
     width: 200px;   
     height: 30px;
+    font-weight: 700;
 }
 
 #title_div,
@@ -189,4 +199,30 @@ body{
     padding: 8px 16px;
     cursor: pointer;
 }
+
+.delete-btn{
+    background: #f63b3b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.Total-Expense {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 20px 20px 0;
+}
+
+.Total-Expense span {
+    color: white;
+    border: 2px solid #3b82f6;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+
 
